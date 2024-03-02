@@ -25,8 +25,8 @@ public class BabyNameInformationService {
     /**
      * Attempts to get information about a baby name from the database
      * if not in the database, then we ask our chat client for that information
-     * @param name
-     * @return
+     * @param name the babies name
+     * @return Information about the baby name
      */
     public BabyNameInformation getNameInformation(String name) {
         var possible = repository.getBabyNameInformationByName(name);
