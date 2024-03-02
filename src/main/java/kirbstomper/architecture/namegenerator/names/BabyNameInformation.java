@@ -1,9 +1,8 @@
-package kirbstomper.architecture.pipeline;
+package kirbstomper.architecture.namegenerator.names;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.Collections;
 import java.util.List;
 
 @Table

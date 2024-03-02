@@ -1,13 +1,13 @@
-package kirbstomper.architecture.pipeline;
+package kirbstomper.architecture.namegenerator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PipelineApplication {
+public class NamesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PipelineApplication.class, args);
+		SpringApplication.run(NamesApplication.class, args);
 	}
 
 }

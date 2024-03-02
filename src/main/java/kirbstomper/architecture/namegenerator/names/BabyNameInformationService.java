@@ -1,10 +1,9 @@
-package kirbstomper.architecture.pipeline.filters;
+package kirbstomper.architecture.namegenerator.names;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import kirbstomper.architecture.pipeline.BabyNameInformation;
-import kirbstomper.architecture.pipeline.BabyNameRepository;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.openai.OpenAiChatClient;
 import org.springframework.stereotype.Service;
@@ -29,7 +28,7 @@ public class BabyNameInformationService {
      * @return Information about the baby name
      */
     public BabyNameInformation getNameInformation(String name) {
-        var possible = repository.getBabyNameInformationByName(name);
+        var possible = repository.getBabyNameInformationByName(StringUtils.capitalize(name.toLowerCase()));
         return possible.orElseGet(() -> {
             var prompt = new Prompt("Get me information about the baby name " + name + """
                      in the format:

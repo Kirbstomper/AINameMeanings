@@ -1,7 +1,5 @@
-package kirbstomper.architecture.pipeline.filters;
+package kirbstomper.architecture.namegenerator.names;
 
-import kirbstomper.architecture.pipeline.BabyNameRepository;
-import kirbstomper.architecture.pipeline.BabyNameInformation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Description;
