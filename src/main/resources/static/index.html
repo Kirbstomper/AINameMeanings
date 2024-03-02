@@ -5,8 +5,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p>Get your name meaning!
+<script>
+
+    function viewName(){
+        var fName = document.getElementById("user-input").value;
+        window.open("/name?name="+fName,"_self")
+    }
+</script>
+<p>Get your AI GENERATED(TM) name meaning!
     <textarea id="user-input"></textarea>
-    <a href="/name">here</a></p>
+    <button onclick="viewName()">Submit</button>
 </body>
 </html>
+
+

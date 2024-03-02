@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AI Generated Name Meanings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="|Name: ${name.name()}|" />
+<p th:text="|Meaning: ${name.meaning()}|" />
+<p th:text="|Origin: ${name.origin()}|" />
+<p th:text="|Similar Names|" />
+<tr th:each="simName : ${name.similarNames()}">
+   <a th:href="@{/name(name=${simName})}"><p th:text="|${simName}|" /> </a>
+</tr>
+
+<a th:href="@{/}">Back to home</a>
+
+</body>
+</html>
